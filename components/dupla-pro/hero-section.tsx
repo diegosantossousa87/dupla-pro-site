@@ -11,7 +11,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, x: 80 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className="absolute right-0 top-0 h-full w-[80%] hidden md:block"
+        className="absolute right-0 top-0 h-full w-[80%] "
       >
         <div className="relative w-full h-full overflow-hidden">
 
