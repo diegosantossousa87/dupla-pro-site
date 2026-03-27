@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Dupla Pro Brand Colors */
+  --dupla-blue: #0B1F3A;
+  --dupla-blue-light: #1a3a5c;
+  --dupla-orange: #FF6A00;
+  --dupla-orange-light: #ff8533;
+  --dupla-white: #ffffff;
+  --dupla-gray: #f5f5f5;
+  --dupla-gray-dark: #6b7280;
+  --dupla-text: #1f2937;
+
+  --background: #ffffff;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --card-foreground: #1f2937;
+  --popover: #ffffff;
+  --popover-foreground: #1f2937;
+  --primary: #FF6A00;
+  --primary-foreground: #ffffff;
+  --secondary: #0B1F3A;
+  --secondary-foreground: #ffffff;
+  --muted: #f5f5f5;
+  --muted-foreground: #6b7280;
+  --accent: #FF6A00;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #FF6A00;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: #0B1F3A;
+  --foreground: #ffffff;
+  --card: #1a3a5c;
+  --card-foreground: #ffffff;
+  --popover: #1a3a5c;
+  --popover-foreground: #ffffff;
+  --primary: #FF6A00;
+  --primary-foreground: #ffffff;
+  --secondary: #1a3a5c;
+  --secondary-foreground: #ffffff;
+  --muted: #1a3a5c;
+  --muted-foreground: #9ca3af;
+  --accent: #FF6A00;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #1a3a5c;
+  --input: #1a3a5c;
+  --ring: #FF6A00;
+}
+
+@theme inline {
+  --font-sans: "Inter", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+
+  --color-dupla-blue: var(--dupla-blue);
+  --color-dupla-blue-light: var(--dupla-blue-light);
+  --color-dupla-orange: var(--dupla-orange);
+  --color-dupla-orange-light: var(--dupla-orange-light);
+  --color-dupla-white: var(--dupla-white);
+  --color-dupla-gray: var(--dupla-gray);
+  --color-dupla-gray-dark: var(--dupla-gray-dark);
+  --color-dupla-text: var(--dupla-text);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+.w-logo {
+  max-width: 100px;
+  max-width: 135px;
+  margin-top: 45px;
+}
