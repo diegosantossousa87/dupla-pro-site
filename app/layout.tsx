@@ -10,9 +10,42 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Dupla Pro - Jogue com atletas profissionais de futevôlei",
-  description: "Encontre, agende e jogue com os melhores atletas de futevôlei. Rápido, seguro e simples.",
-  generator: "v0.app",
+  title: "Dupla Pro - Jogue com atletas avançados de futevôlei",
+  description:
+    "Encontre, agende e jogue com os melhores atletas de futevôlei. Rápido, seguro e simples.",
+
+  icons: {
+    icon: "images/dupla-pro-logo.png",        // padrão
+    shortcut: "images/dupla-pro-logo.png",    // fallback
+    apple: "images/dupla-pro-logo.png",       // iPhone/iPad
+  },
+
+  // 🚀 OPEN GRAPH (WhatsApp, Facebook, etc)
+  openGraph: {
+    title: "Dupla Pro",
+    description: "Jogue com atletas avançados de futevôlei",
+    url: "https://duplapro.com", 
+    siteName: "Dupla Pro",
+    images: [
+      {
+        url: "images/og-image.png", 
+        width: 1200,
+        height: 630,
+        alt: "Dupla Pro - Futevôlei",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Dupla Pro",
+    description: "Jogue com atletas avançados de futevôlei",
+    images: ["images/og-image.png"],
+  },
+
+  metadataBase: new URL("https://duplapro.com"), 
 }
 
 export const viewport: Viewport = {
